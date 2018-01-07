@@ -1,0 +1,24 @@
+<h4>Author: {{ atr[0].name | uppercase}}</h4>
+
+<div>
+  <label>name:
+    <input [(ngModel)]="atr[0].name" placeholder="name">
+  </label>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let a of atr">
+      <span>Authors name: {{a.name}}</span>
+
+      <ul>
+        <li *ngFor="let book of a.books">
+          <span>Book id: <b>{{book.id}}</b></span>
+          <span>name: '{{book.name}}'</span>
+          <span>.{{book.pages}}p</span>
+        </li>
+      </ul>
+
+    </li>
+  </ul>
+</div>
