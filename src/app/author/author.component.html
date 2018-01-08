@@ -11,22 +11,20 @@
         [class.selected]="a === selectedAuthor">
       <span> {{a.id}}</span>
       <span> {{a.name}}</span>
-
-      <ul class="author_box">
-        <li class="author_info" *ngFor="let book of a.books">
-          <span>Book <b>id-{{book.id}}</b></span>
-          <span>name: '{{book.name}}'</span>
-          <span>.{{book.pages}}p</span>
-        </li>
-      </ul>
-
     </li>
   </ul>
 </div>
 
-<div *ngIf="selectedAuthor.name">
+<div *ngIf="selectedAuthor">
 <!--<div>-->
-  <label>name:
-    <input [(ngModel)]="selectedAuthor.name" placeholder="name">
+  <label>
+    name: <input [(ngModel)]="selectedAuthor.name" placeholder="name">
   </label>
+  <ul class="author_box">
+    <li class="author_info" *ngFor="let book of selectedAuthor.books">
+      <span>Book <b>id-{{book.id}}</b></span>
+      <span>name: '{{book.name}}'</span>
+      <span>.{{book.pages}}p</span>
+    </li>
+  </ul>
 </div>

@@ -1,7 +1,3 @@
-.author_info {
-  display: none;
-  border: none;
-}
 .row {
   position: relative;
 }
@@ -11,14 +7,6 @@
   padding: 5px 10px;
   background: yellowgreen;
   list-style: none;
-}
-li.badge:hover ul {
-  position: absolute;
-  top: 44px;
-  LEFT: 180px;
-}
-li.badge:hover ul li.author_info {
-  display: block;
 }
 .selected {
   text-decoration: underline;
