@@ -13,18 +13,20 @@
     </ul>
   </div>
 
-  <div *ngIf="selectedAuthor">
+  <app-book-detail [heroAuthor]="selectedAuthor"></app-book-detail>
+  <!--// moved to book-detail-->
+  <!--<div *ngIf="selectedAuthor">-->
+    <!--&lt;!&ndash;<div>&ndash;&gt;-->
     <!--<div>-->
-    <div>
-      <label> id: {{selectedAuthor.id}}</label>
-      <label> name: <input [(ngModel)]="selectedAuthor.name" placeholder="name"> </label>
-    </div>
-    <ul class="author_box">
-      <li class="author_info" *ngFor="let book of selectedAuthor.books">
-        <span>Book <b>id-{{book.id}}</b></span>
-        <span>name: '{{book.name}}'</span>
-        <span>.{{book.pages}}p</span>
-      </li>
-    </ul>
-  </div>
+      <!--<label> id: {{selectedAuthor.id}}</label>-->
+      <!--<label> name: <input [(ngModel)]="selectedAuthor.name" placeholder="name"> </label>-->
+    <!--</div>-->
+    <!--<ul class="author_box">-->
+      <!--<li class="author_info" *ngFor="let book of selectedAuthor.books">-->
+        <!--<span>Book <b>id-{{book.id}}</b></span>-->
+        <!--<span>name: '{{book.name}}'</span>-->
+        <!--<span>.{{book.pages}}p</span>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
 </section>
