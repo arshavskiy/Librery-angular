@@ -10,14 +10,14 @@ import { AllAUTHORS } from "../mock-authors"
 })
 export class AuthorComponent implements OnInit {
 
-  selectedA : string = '';
+  selectedAuthor : string = '';
   selectAtr = AllAUTHORS;
 
   // selectedHero: Hero;
 
   onSelect(a) {
-    this.selectedA = a;
-    console.log(this.selectedA);
+    this.selectedAuthor = a;
+    console.log(this.selectedAuthor);
 
   }
 
