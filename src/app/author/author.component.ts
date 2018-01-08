@@ -10,7 +10,14 @@ import { AllAUTHORS } from "../mock-authors"
 })
 export class AuthorComponent implements OnInit {
 
-  atr = AllAUTHORS;
+  selectAtr = AllAUTHORS;
+
+  // selectedHero: Hero;
+
+  onSelect(a) {
+    this.selectAtr = a;
+  }
+
 
   // author : Authors = {
   //   id:1,

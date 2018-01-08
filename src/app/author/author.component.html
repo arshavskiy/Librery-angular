@@ -1,14 +1,14 @@
-<h4>Author: {{ atr[0].name | uppercase}}</h4>
+<h4>Author: {{ selectAtr[0].name | uppercase}}</h4>
 
 <div>
   <label>name:
-    <input [(ngModel)]="atr[0].name" placeholder="name">
+    <input [(ngModel)]="selectAtr[0].name" placeholder="name">
   </label>
 </div>
 
 <div>
   <ul>
-    <li *ngFor="let a of atr">
+    <li class="" *ngFor="let a of selectAtr" (click)="onSelect(a)">
       <span>Authors name: {{a.name}}</span>
 
       <ul>
