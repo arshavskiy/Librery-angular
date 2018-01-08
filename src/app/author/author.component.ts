@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { Authors} from "../authors";
 import { AllAUTHORS } from "../mock-authors"
 
 
@@ -12,8 +11,6 @@ export class AuthorComponent implements OnInit {
 
   selectedAuthor : string = '';
   selectAtr = AllAUTHORS;
-
-  // selectedHero: Hero;
 
   onSelect(a) {
     this.selectedAuthor = a;
