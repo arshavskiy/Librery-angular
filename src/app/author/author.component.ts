@@ -10,23 +10,16 @@ import { AllAUTHORS } from "../mock-authors"
 })
 export class AuthorComponent implements OnInit {
 
+  selectedA : string = '';
   selectAtr = AllAUTHORS;
 
   // selectedHero: Hero;
 
   onSelect(a) {
-    this.selectAtr = a;
+    this.selectedA = a;
+    console.log(this.selectedA);
+
   }
-
-
-  // author : Authors = {
-  //   id:1,
-  //   name: 'Arshavsky Pavel',
-  //   books : [
-  //     {'id':10, 'name':'1000 Tales of Arabiya', 'pages': 344},
-  //     {'id':11, 'name':'Doggy Days', 'pages': 122}
-  //   ]
-  // }
 
   constructor() { }
 

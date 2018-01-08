@@ -1,25 +1,32 @@
-.author_info {
+
+.author_info{
   display: none;
-  border: none;
+  border:none;
+
 }
-.row {
+.row{
   position: relative;
 }
-.badge {
+
+.badge{
   cursor: pointer;
   font-size: 16px;
-  padding: 5px 10px;
+  padding:5px 10px;
   background: yellowgreen;
   list-style: none;
+  & li:hover{
+  }
+
 }
 li.badge:hover ul {
   position: absolute;
   top: 44px;
   LEFT: 180px;
+  li.author_info {
+    display: block;
+  }
 }
-li.badge:hover ul li.author_info {
-  display: block;
-}
-.selected {
+
+.selected{
   text-decoration: underline;
 }

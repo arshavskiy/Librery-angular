@@ -1,18 +1,24 @@
+
+
 <h4>Author: {{ selectAtr[0].name | uppercase}}</h4>
 
-<div>
+<!--<div *ngIf="selectedA.name">-->
+ <div>
   <label>name:
-    <input [(ngModel)]="selectAtr[0].name" placeholder="name">
+    <input [(ngModel)]="selectedA.name" placeholder="name">
   </label>
 </div>
 
-<div>
+<div class="row">
+  <h4>Authors</h4>
   <ul>
-    <li class="" *ngFor="let a of selectAtr" (click)="onSelect(a)">
-      <span>Authors name: {{a.name}}</span>
+    <li class="badge" *ngFor="let a of selectAtr" (click)="onSelect(a)"
+        [class.selected]="a === selectedA">
+      <span> {{a.id}}</span>
+      <span> {{a.name}}</span>
 
-      <ul>
-        <li *ngFor="let book of a.books">
+      <ul class="author_box">
+        <li class="author_info" *ngFor="let book of a.books">
           <span>Book <b>id-{{book.id}}</b></span>
           <span>name: '{{book.name}}'</span>
           <span>.{{book.pages}}p</span>
