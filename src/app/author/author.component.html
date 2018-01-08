@@ -2,12 +2,7 @@
 
 <h4>Author: {{ selectAtr[0].name | uppercase}}</h4>
 
-<!--<div *ngIf="selectedA.name">-->
- <div>
-  <label>name:
-    <input [(ngModel)]="selectedA.name" placeholder="name">
-  </label>
-</div>
+
 
 <div class="row">
   <h4>Authors</h4>
@@ -27,4 +22,11 @@
 
     </li>
   </ul>
+</div>
+
+<!--<div *ngIf="selectedA.name">-->
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedA.name" placeholder="name">
+  </label>
 </div>
