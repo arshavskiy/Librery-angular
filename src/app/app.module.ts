@@ -6,6 +6,7 @@ import { FormsModule} from "@angular/forms"
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './author/author.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import {AuthorService} from "./author.service";
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

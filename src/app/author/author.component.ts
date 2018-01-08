@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AllAUTHORS } from "../mock-authors"
+import {Component, OnInit} from '@angular/core';
+import {Authors} from "../authors"
+import {AuthorService} from "../author.service";
 
 
 @Component({
@@ -9,8 +10,8 @@ import { AllAUTHORS } from "../mock-authors"
 })
 export class AuthorComponent implements OnInit {
 
-  selectedAuthor : string = '';
-  selectAtr = AllAUTHORS;
+  selectedAuthor: string = '';
+  selectAtr: Authors[];
 
   onSelect(a) {
     this.selectedAuthor = a;
@@ -18,9 +19,15 @@ export class AuthorComponent implements OnInit {
 
   }
 
-  constructor() { }
+  getAuthors(): void {
+    this.selectAtr = this.authorService.getAllAuthors()
+  }
+
+  constructor(private authorService: AuthorService) {
+  }
 
   ngOnInit() {
+    this.getAuthors();
   }
 
 }
