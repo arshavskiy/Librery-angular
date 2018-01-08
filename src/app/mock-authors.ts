@@ -1,6 +1,7 @@
-import {Authors} from './authors'
+// import {Authors} from './authors'
+// export const AllAUTHORS: Authors[] = [
 
-export const AllAUTHORS: Authors[] = [
+export const AllAUTHORS = [
   {
     id: 1,
     name: 'Arshavsky Pavel',
