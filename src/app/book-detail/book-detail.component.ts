@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Authors } from "../authors"
+import { Authors } from '../authors';
 
 @Component({
   selector: 'app-book-detail',

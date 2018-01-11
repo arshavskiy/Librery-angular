@@ -19,8 +19,13 @@ export class AuthorComponent implements OnInit {
 
   }
 
+  // getAuthors() {
+  //   this.selectAtr = this.authorService.getAllAuthors();
+  // }
+
   getAuthors(): void {
-    this.selectAtr = this.authorService.getAllAuthors()
+    this.authorService.getAllAuthors()
+      .subscribe(selectAtr => this.selectAtr = selectAtr);
   }
 
   constructor(private authorService: AuthorService) {
