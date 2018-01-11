@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Authors} from "../authors"
-import {AuthorService} from "../author.service";
+import {Authors} from '../authors'
+import {AuthorService} from '../author.service';
 
 
 @Component({
