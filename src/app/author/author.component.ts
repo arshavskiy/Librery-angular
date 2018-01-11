@@ -10,7 +10,7 @@ import {AuthorService} from "../author.service";
 })
 export class AuthorComponent implements OnInit {
 
-  selectedAuthor: string = '';
+  selectedAuthor:  string[] = [];
   selectAtr: Authors[];
 
   onSelect(a) {
